@@ -4,8 +4,6 @@ This is an AIchor demo project, please fell free for fork it if you intend on tr
 
 ## Goal
 
-
-
 This project aims to get up to speed with AIchor by going through the whole process.
 
 
