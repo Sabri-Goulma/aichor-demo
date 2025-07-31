@@ -9,7 +9,9 @@ builder:
 spec:
   operator: pytorch
   image: image
-  command: "python3 src/main.py"
+  command:  >
+    bash test_pvc.sh
+
 
   tensorboard:
     enabled: true
