@@ -10,7 +10,7 @@ spec:
   operator: batchjob
   image: image
   command: >
-    bash src/test_pvc2.sh.sh
+    bash src/test_pvc2.sh
 
   tensorboard:
     enabled: true
