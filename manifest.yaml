@@ -15,10 +15,10 @@ spec:
   tensorboard:
     enabled: true
 
-  storage:
-    attachExistingPVCs:
-      - name: testprojpvc-af7b62643072486e-test-0fae16c22bfc4f47
-        mountPoint: /mnt/testprojpvc-af7b62643072486e-test-0fae16c22bfc4f47
+  #storage:
+    #attachExistingPVCs:
+      #- name: testprojpvc-af7b62643072486e-test-0fae16c22bfc4f47
+        #mountPoint: /mnt/testprojpvc-af7b62643072486e-test-0fae16c22bfc4f47
 
   types:
     Worker:
