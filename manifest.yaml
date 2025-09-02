@@ -4,27 +4,29 @@ apiVersion: 0.2.2
 builder:
   image: image
   context: smoke-test # smoke-test folder
-  dockerfile: ./build/Dockerfile
+  dockerfile: ./build/ray.Dockerfile # need ray installed
 
 spec:
-  operator: batchjob
+  operator: kuberay
   image: image
-  command: >
-    bash src/test_pvc2.sh
+  command: "python3 -u main.py --operator=kuberay --sleep=300 --tb-write=True"
+
+  debug:
+    jupyter: false
 
   tensorboard:
     enabled: true
 
- # storage:
- #   attachExistingPVCs:
- #     - name: testprojpvc-af7b62643072486e-andanotheron-19b831fed72c429e
- #       mountPoint: /mnt/testprojpvc-af7b62643072486e-andanotheron-19b831fed72c429e
-
   types:
-    Worker:
-      count: 1
+    Head:
       resources:
         cpus: 1
         ramRatio: 2
-        shmSizeGB: 0
 
+    Workers:
+      - name: cpu-workers
+        count: 1
+        resources:
+          cpus: 1
+          ramRatio: 2
+          shmSizeGB: 0
