@@ -1,0 +1,32 @@
+kind: AIchorManifest
+apiVersion: 0.2.2
+
+builder:
+  image: image
+  context: smoke-test # smoke-test folder
+  dockerfile: ./build/ray.Dockerfile # need ray installed
+
+spec:
+  operator: kuberay
+  image: image
+  command: "python3 -u main.py --operator=kuberay --sleep=300 --tb-write=True"
+
+  debug:
+    jupyter: false
+
+  tensorboard:
+    enabled: true
+
+  types:
+    Head:
+      resources:
+        cpus: 1
+        ramRatio: 2
+
+    Workers:
+      - name: cpu-workers
+        count: 1
+        resources:
+          cpus: 1
+          ramRatio: 2
+          shmSizeGB: 0
