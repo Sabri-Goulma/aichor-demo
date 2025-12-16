@@ -25,7 +25,6 @@ $ git push
 
 exp second test
 
-
 # Demo projects
 
 ## Smoke test
