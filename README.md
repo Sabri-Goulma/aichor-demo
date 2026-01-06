@@ -24,7 +24,6 @@ $ git commit -m "exp: eriment" # commit has to start by "exp: " to trigger exper
 $ git push
 ```
 
-
 # Demo projects
 
 ## Smoke test
