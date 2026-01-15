@@ -22,7 +22,6 @@ $ git add manifest.yaml
 $ git commit -m "exp: eriment" # commit has to start by "exp: " to trigger experiment
 $ git push
 ```
-
 # Demo projects
 
 ## Smoke test
