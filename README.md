@@ -38,6 +38,7 @@ Use hugging face accelerate to setup the distribution with pytorch operator.
 
 ## Jax demo
 
+
 Demo project using jax distributed with processes spread accross multiple containers.
 
 ## Parallel jobs demos
