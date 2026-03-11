@@ -1,32 +1,32 @@
-kind: AIchorManifest
+kind: AIchorManifest 
 apiVersion: 0.2.2
 
 builder:
   image: image
-  context: smoke-test # smoke-test folder
-  dockerfile: ./build/ray.Dockerfile # need ray installed
+  dockerfile: dockerfiles/Dockerfile
+  context: .   
+  buildArgs:  
+    JFROG_BASE_REPOSITORY: aichor-dev-docker
+    JFROG_URL: artifactory.bion.tech
 
 spec:
-  operator: kuberay
+  operator: jobset 
   image: image
-  command: "python3 -u main.py --operator=kuberay --sleep=300 --tb-write=True"       
-
-  debug:
-    jupyter: false
+  command: "python3 -u main.py --operator=jobset --sleep=300 --tb-write=True"
 
   tensorboard:
     enabled: true
 
   types:
-    Head:
+    master:
+      count: 1
       resources:
         cpus: 1
         ramRatio: 2
-
-    Workers:
-      - name: cpu-workers
-        count: 1
-        resources:
-          cpus: 1
-          ramRatio: 2
-          shmSizeGB: 0
+        shmSizeGB: 0
+    worker:
+      count: 1
+      resources:
+        cpus: 1
+        ramRatio: 2
+        shmSizeGB: 0
