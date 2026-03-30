@@ -9,6 +9,7 @@ builder:
   dockerfile: ./Dockerfile
 
 spec:
+  engineName: main-gcp-dev-v2
   operator: xgboost
   image: xgboost-demo
   command: "python src/train.py"
