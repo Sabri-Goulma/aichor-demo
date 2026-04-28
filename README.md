@@ -9,7 +9,6 @@ This project aims to get up to speed with AIchor by going through the whole proc
 ## How to use it ?
 
 
-
 You can find multiple manifests samples in the `manifests` directories. If you want to try hugging face accelerate for example, all you need to do is to copy it:
 
 ```bash
