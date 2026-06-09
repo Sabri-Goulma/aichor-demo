@@ -10,7 +10,6 @@ This project aims to get up to speed with AIchor by going through the whole proc
 
 You can find multiple manifests samples in the `manifests` directories. If you want to try hugging face accelerate for example, all you need to do is to copy it:
 
-
 ```bash
 $ cp hugging-face-accelerate/manifests/single_worker/manifest.1-wrkr-1-a100-80gb.yaml manifest.yaml
 
