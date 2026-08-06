@@ -26,6 +26,7 @@ $ git push
 
 ## Smoke test
 
+
 This project works accross all AIchor operators. It runs a vanilla experiment:
 - print chosen operator environment variables
 - creates a tensorboard log with the commit message
