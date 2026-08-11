@@ -30,3 +30,14 @@ spec:
           cpus: 1
           ramRatio: 2
           shmSizeGB: 0
+
+      - name: gpu-workers
+        count: 1
+        resources:
+          cpus: 1
+          ramRatio: 2
+          shmSizeGB: 0
+          accelerators:
+            gpu:
+              product: nvidia-tesla-p4
+              count: 1
