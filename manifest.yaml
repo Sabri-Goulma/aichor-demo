@@ -39,5 +39,5 @@ spec:
           shmSizeGB: 0
           accelerators:
             gpu:
-              product: nvidia-tesla-p4
+              product: nvidia-tesla-t4
               count: 1
