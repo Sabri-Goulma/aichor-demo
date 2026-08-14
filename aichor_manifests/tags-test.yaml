@@ -2,8 +2,9 @@ kind: AIchorManifest
 apiVersion: 0.2.2
 
 tags:
-  - baseline
-  - gpu sweep
+  - "GPU   Sweep"
+  - "  baseline "
+  - Baseline
 
 builder:
   image: image
