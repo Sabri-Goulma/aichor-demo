@@ -1,8 +1,6 @@
 kind: AIchorManifest
 apiVersion: 0.2.2
 
-tags: baseline
-
 builder:
   image: image
   context: smoke-test # smoke-test folder
