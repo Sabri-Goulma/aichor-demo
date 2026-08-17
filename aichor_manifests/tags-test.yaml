@@ -1,7 +1,9 @@
 kind: AIchorManifest
 apiVersion: 0.2.2
 
-tags: baseline
+tags:
+  - baseline
+  - gpu sweep
 
 builder:
   image: image
