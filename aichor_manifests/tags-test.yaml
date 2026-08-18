@@ -1,6 +1,22 @@
 kind: AIchorManifest
 apiVersion: 0.2.2
 
+tags:
+  - baseline
+  - this-tag-name-is-deliberately-longer-than-the-fifty-char-cap
+  - 42
+  - on
+  - sweep-a
+  - sweep-b
+  - sweep-c
+  - sweep-d
+  - sweep-e
+  - sweep-f
+  - sweep-g
+  - sweep-h
+  - sweep-i
+  - over-the-cap
+
 builder:
   image: image
   context: smoke-test # smoke-test folder
