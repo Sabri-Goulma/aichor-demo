@@ -3,19 +3,19 @@ apiVersion: 0.2.2
 
 builder:
   image: image
-  context: smoke-test # smoke-test folder
-  dockerfile: ./build/ray.Dockerfile # need ray installed
+  context: smoke-test
+  dockerfile: ./build/ray.Dockerfile
 
 spec:
   operator: kuberay
   image: image
-  command: "python3 -u main.py --operator=kuberay --sleep=300 --tb-write=True"       
+  command: "echo AICHOR-SELECTOR-REPRO-V1 && python3 -u main.py --operator=kuberay --sleep=30"
 
   debug:
     jupyter: false
 
   tensorboard:
-    enabled: true
+    enabled: false
 
   types:
     Head:
