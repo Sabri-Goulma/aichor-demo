@@ -1,21 +1,21 @@
 kind: AIchorManifest
 apiVersion: 0.2.2
 
-builder:  
-  image: image 
-  context: smoke-test # smoke-test folder
-  dockerfile: ./build/ray.Dockerfile # need ray installed   
+builder:
+  image: image
+  context: smoke-test
+  dockerfile: ./build/ray.Dockerfile
 
 spec:
   operator: kuberay
   image: image
-  command: "python3 -u main.py --operator=kuberay --sleep=300 --tb-write=True"       
+  command: "echo AICHOR-REPRO-BRANCH-V1 && python3 -u main.py --operator=kuberay --sleep=30"
 
   debug:
     jupyter: false
 
   tensorboard:
-    enabled: true
+    enabled: false
 
   types:
     Head:
@@ -30,14 +30,3 @@ spec:
           cpus: 1
           ramRatio: 2
           shmSizeGB: 0
-
-      - name: gpu-workers
-        count: 1
-        resources:
-          cpus: 1
-          ramRatio: 2
-          shmSizeGB: 0
-          accelerators:
-            gpu:
-              product: nvidia-tesla-t4
-              count: 1
